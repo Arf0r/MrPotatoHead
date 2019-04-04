@@ -1,4 +1,4 @@
-# Project Title
+# Mr. PotatoHead
 
 Android app that allows the user to assemble the classic toy Mr. potatoHead
 
