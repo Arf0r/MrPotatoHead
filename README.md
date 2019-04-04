@@ -10,10 +10,10 @@ Run the app on a built-in emulator or on your own android device and click the c
 ## Most important files
 
 The most important files are the MainActivity.java file, and the layout.xml files which can be found in the following locations:
-MrPotatoHead/app/src/main/java/com/example/mrpotatohead/MainActivity.java
-MrPotatoHead/app/src/main/res/layout (or layout-land)/activity_main.xml
+- MrPotatoHead/app/src/main/java/com/example/mrpotatohead/MainActivity.java
+- MrPotatoHead/app/src/main/res/layout (or layout-land)/activity_main.xml
 
-### Features of the current version
+## Features of the current version
 
 - Allows for phones of various sizes to run the app in a structured manner
 - Allows for landscape mode 
