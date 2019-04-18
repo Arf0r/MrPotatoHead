@@ -12,7 +12,8 @@ import android.widget.ImageView;
 import com.example.mrpotatohead.R;
 
 public class MainActivity extends AppCompatActivity {
-
+    
+    // Initialize image imageview variables for every body part
     ImageView imageBody;
     ImageView imageArms;
     ImageView imageEars;
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
+        // Find the imageViews by their ID and save them
         imageBody = (ImageView) findViewById(R.id.body);
         imageArms = (ImageView) findViewById(R.id.arms);
         imageEars = (ImageView) findViewById(R.id.ears);
@@ -47,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
+        
+        // Get the current visibility states and save it
         outState.putInt("Body", imageBody.getVisibility());
         outState.putInt("Arms", imageArms.getVisibility());
         outState.putInt("Ears", imageEars.getVisibility());
@@ -65,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestoreInstanceState(Bundle inState) {
         super.onRestoreInstanceState(inState);
-
+        
+        // Restore the saved visibility states
         imageBody.setVisibility(inState.getInt("Body"));
         imageArms.setVisibility(inState.getInt("Arms"));
         imageEars.setVisibility(inState.getInt("Ears"));
@@ -79,10 +83,12 @@ public class MainActivity extends AppCompatActivity {
         imageHat.setVisibility(inState.getInt("Hat"));
     }
     public void checkClicked(View v) {
+        // Save which checkbox was clicked, and save the text and its current checked state
         CheckBox checkbox = (CheckBox) v;
         String text = checkbox.getText().toString();
         boolean checked = checkbox.isChecked();
-
+        
+        // Check if the text of the checkbox, matches "Body", if so, change the visibility of the imageView
         String body = "Body";
         if (text.equals(body)) {
             if (checked) {
@@ -91,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
                 imageBody.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Arms", if so, change the visibility of the imageView
         String arms = "Arms";
         if (text.equals(arms)) {
             if (checked) {
@@ -99,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
                 imageArms.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Ears", if so, change the visibility of the imageView
         String ears = "Ears";
         if (text.equals(ears)) {
             if (checked) {
@@ -107,6 +117,8 @@ public class MainActivity extends AppCompatActivity {
                 imageEars.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Eyes", if so, change the visibility of the imageView
         String eyes = "Eyes";
         if (text.equals(eyes)) {
             if (checked) {
@@ -115,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
                 imageEyes.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Eyebrows", if so, change the visibility of the imageView
         String eyebrows = "Eyebrows  ";
         if (text.equals(eyebrows)) {
             if (checked) {
@@ -123,6 +137,8 @@ public class MainActivity extends AppCompatActivity {
                 imageEyebrows.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Glasses", if so, change the visibility of the imageView
         String glasses = "Glasses";
         if (text.equals(glasses)) {
             if (checked) {
@@ -131,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
                 imageGlasses.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Nose", if so, change the visibility of the imageView
         String nose = "Nose";
         if (text.equals(nose)) {
             if (checked) {
@@ -139,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
                 imageNose.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Hat", if so, change the visibility of the imageView
         String hat = "Hat";
         if (text.equals(hat)) {
             if (checked) {
@@ -147,6 +167,8 @@ public class MainActivity extends AppCompatActivity {
                 imageHat.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Mouth", if so, change the visibility of the imageView
         String mouth = "Mouth";
         if (text.equals(mouth)) {
             if (checked) {
@@ -155,6 +177,8 @@ public class MainActivity extends AppCompatActivity {
                 imageMouth.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Mustache", if so, change the visibility of the imageView
         String mustache = "Mustache";
         if (text.equals(mustache)) {
             if (checked) {
@@ -163,6 +187,8 @@ public class MainActivity extends AppCompatActivity {
                 imageMustache.setVisibility(View.INVISIBLE);
             }
         }
+        
+        // Check if the text of the checkbox, matches "Shoes", if so, change the visibility of the imageView
         String shoes = "Shoes";
         if (text.equals(shoes)) {
             if (checked) {
